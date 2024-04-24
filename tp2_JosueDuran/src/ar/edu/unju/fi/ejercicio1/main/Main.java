@@ -128,12 +128,14 @@ public class Main {
 	{
 		Scanner cin = new Scanner(System.in);
 		int codigo;
+		boolean band = false;
 		System.out.println("Ingrese codigo de producto a modificar:");
 		codigo = cin.nextInt();
 		for(Producto producto: gondola)
 		{
 			if(codigo == producto.getCodigo())
 			{
+				band = true;
 				System.out.println("Ingrese Descripcion: ");
 				producto.setDescripcion(cin.nextLine());
 				System.out.println("Ingrese Precio Unitario: ");
@@ -142,7 +144,10 @@ public class Main {
 				submenu(producto);
 				submenu2(producto);
 			}
-				
+			
 		}
+		if(!band)
+			System.out.println("El codigo no pertenece a un producto existente");
+			
 	}
 }
