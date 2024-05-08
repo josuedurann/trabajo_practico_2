@@ -6,6 +6,7 @@ public class Producto {
 	private double preciouni;
 	private OrigenDeFabricacion origenfab;
 	private Categoria categoria;
+
 	private boolean estado;
 	public int getCodigo() {
 		return codigo;
@@ -20,6 +21,10 @@ public class Producto {
 		this.origenfab = origenfab;
 		this.categoria = categoria;
 		this.estado = estado;
+
+	public int getCodigo() {
+		return codigo;
+
 	}
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
@@ -48,17 +53,23 @@ public class Producto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
 	public boolean isEstado() {
 		return estado;
 	}
 	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
+
 	@Override
 	public String toString() {
 		return "Producto [codigo=" + codigo + ", descripcion=" + descripcion + ", preciouni=" + preciouni
 				+ ", origenfab=" + origenfab + ", categoria=" + categoria + ", estado=" + estado + "]";
 	}
+
+
+
+
 	
 	
 
